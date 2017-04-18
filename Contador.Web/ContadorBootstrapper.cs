@@ -1,7 +1,8 @@
 ﻿using Base.Core.Bootstrap;
-using System;
 using Base.Core.Injector;
-using Base.Core.Utils;
+using Contador.Data;
+using Base.Core.EntityFramework;
+using Contador.Domain;
 
 namespace Contador.Web
 {
@@ -9,7 +10,10 @@ namespace Contador.Web
     {
         public void Load(IInjector injector)
         {
-            injector.AddTransient<IDateTimeBase, DataTimeService>();
+            //injector.AddTransient<IDateTimeBase, DataTimeService>();
+            new DataBootstrapper().Load(injector);
+            new EFBoostrapper().Load(injector);
+            new DomainBoostrapper().Load(injector);
         }
     }
 }

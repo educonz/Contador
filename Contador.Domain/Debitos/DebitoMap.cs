@@ -1,17 +1,17 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 
-namespace Contador.Domain.Creditos
+namespace Contador.Domain.Debitos
 {
-    public class CreditoMap : EntityTypeConfiguration<Credito>
+    public class DebitoMap : EntityTypeConfiguration<Debito>
     {
-        public CreditoMap()
+        public DebitoMap()
         {
-            ToTable(nameof(Credito));
+            ToTable(nameof(Debito));
             HasKey(x => x.Id);
 
             Property(x => x.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            Property(x => x.DataEntrada).IsRequired();
+            Property(x => x.DataSaida).IsRequired();
             Property(x => x.Valor).IsRequired();
             Property(x => x.Usuario).IsRequired();
 
@@ -20,6 +20,10 @@ namespace Contador.Domain.Creditos
             HasRequired(x => x.TipoPagamento)
                 .WithMany()
                 .HasForeignKey(x => x.TipoPagamentoId);
+
+            HasRequired(x => x.TipoDespesa)
+                .WithMany()
+                .HasForeignKey(x => x.TipoDespesaId);
         }
     }
 }

@@ -4,7 +4,7 @@ using Base.Core.Injector;
 
 namespace Base.Core.EntityFramework
 {
-    public class IBoostrapper : IBootstrapper
+    public class EFBoostrapper : IBootstrapper
     {
         public void Load(IInjector injector)
         {

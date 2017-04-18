@@ -2,13 +2,14 @@
 using Base.Core.Injector;
 using Base.Core.Data;
 
-namespace Contador.Domain
+namespace Contador.Data
 {
-    public class DomainBoostrapper : IBootstrapper
+    public class DataBootstrapper : IBootstrapper
+
     {
         public void Load(IInjector injector)
         {
-            
+            injector.AddTransient<IDataContext, Contexto>();
         }
     }
 }

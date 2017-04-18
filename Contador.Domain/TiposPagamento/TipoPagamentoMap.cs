@@ -3,7 +3,7 @@ using System.Data.Entity.ModelConfiguration;
 
 namespace Contador.Domain.TiposPagamento
 {
-    class TipoPagamentoMap : EntityTypeConfiguration<TipoPagamento>
+    public class TipoPagamentoMap : EntityTypeConfiguration<TipoPagamento>
     {
         public TipoPagamentoMap()
         {
