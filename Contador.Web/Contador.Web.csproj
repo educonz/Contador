@@ -344,6 +344,10 @@
       <Project>{CB1FAD92-325E-408F-94E6-9C1329417919}</Project>
       <Name>Base.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Contador.Contracts\Contador.Contracts.csproj">
+      <Project>{D43B55A0-649A-4918-AFF8-E77C04E31197}</Project>
+      <Name>Contador.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Contador.Data\Contador.Data.csproj">
       <Project>{9A053D79-AC06-4930-9FDC-10E2C9C539DA}</Project>
       <Name>Contador.Data</Name>
