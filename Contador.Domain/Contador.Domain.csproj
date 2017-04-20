@@ -49,14 +49,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contexto.cs" />
     <Compile Include="Creditos\Credito.cs" />
     <Compile Include="Creditos\CreditoMap.cs" />
+    <Compile Include="Debitos\Debito.cs" />
+    <Compile Include="Debitos\DebitoMap.cs" />
     <Compile Include="DomainBoostrapper.cs" />
+    <Compile Include="Implementations\Services\ServiceVerbatized.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TiposDespesa\TipoDespesa.cs" />
     <Compile Include="TiposDespesa\TipoDespesaMap.cs" />
+    <Compile Include="TiposPagamento\Adaptadores\ITipoPagamentoAdapter.cs" />
+    <Compile Include="TiposPagamento\Adaptadores\TipoPagamentoAdapter.cs" />
+    <Compile Include="TiposPagamento\Servicos\ITipoPagamentoService.cs" />
+    <Compile Include="TiposPagamento\Servicos\TipoPagamentoService.cs" />
     <Compile Include="TiposPagamento\TipoPagamento.cs" />
+    <Compile Include="TiposPagamento\TipoPagamentoBootstrapper.cs" />
     <Compile Include="TiposPagamento\TipoPagamentoMap.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -67,6 +74,10 @@
     <ProjectReference Include="..\Base.Core\Base.Core.csproj">
       <Project>{CB1FAD92-325E-408F-94E6-9C1329417919}</Project>
       <Name>Base.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Contador.Contracts\Contador.Contracts.csproj">
+      <Project>{D43B55A0-649A-4918-AFF8-E77C04E31197}</Project>
+      <Name>Contador.Contracts</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

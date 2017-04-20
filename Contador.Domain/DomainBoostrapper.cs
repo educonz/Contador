@@ -1,6 +1,6 @@
 ﻿using Base.Core.Bootstrap;
 using Base.Core.Injector;
-using Base.Core.Data;
+using Contador.Domain.TiposPagamento;
 
 namespace Contador.Domain
 {
@@ -8,7 +8,7 @@ namespace Contador.Domain
     {
         public void Load(IInjector injector)
         {
-            
+            new TipoPagamentoBootstrapper().Load(injector);
         }
     }
 }

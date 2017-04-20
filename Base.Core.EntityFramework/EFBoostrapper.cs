@@ -8,7 +8,7 @@ namespace Base.Core.EntityFramework
     {
         public void Load(IInjector injector)
         {
-            injector.AddScoped<IRepository, Repository>();
+            injector.AddTransient<IRepository, Repository>();
         }
     }
 }

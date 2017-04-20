@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contador.Web", "Contador.We
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contador.Data", "Contador.Data\Contador.Data.csproj", "{9A053D79-AC06-4930-9FDC-10E2C9C539DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contador.Contracts", "Contador.Contracts\Contador.Contracts.csproj", "{D43B55A0-649A-4918-AFF8-E77C04E31197}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{9A053D79-AC06-4930-9FDC-10E2C9C539DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A053D79-AC06-4930-9FDC-10E2C9C539DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A053D79-AC06-4930-9FDC-10E2C9C539DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D43B55A0-649A-4918-AFF8-E77C04E31197}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D43B55A0-649A-4918-AFF8-E77C04E31197}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D43B55A0-649A-4918-AFF8-E77C04E31197}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D43B55A0-649A-4918-AFF8-E77C04E31197}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,5 +67,6 @@ Global
 		{D6D06CE2-D471-42C6-8CB1-958C6C006E89} = {2B0EC380-162A-446B-BB85-784ADD079345}
 		{0803D183-2B17-446C-A65F-F077C2A07E03} = {D59EFF13-AF57-4371-A581-24ED2C50B3AF}
 		{9A053D79-AC06-4930-9FDC-10E2C9C539DA} = {D59EFF13-AF57-4371-A581-24ED2C50B3AF}
+		{D43B55A0-649A-4918-AFF8-E77C04E31197} = {D59EFF13-AF57-4371-A581-24ED2C50B3AF}
 	EndGlobalSection
 EndGlobal

@@ -1,4 +1,5 @@
 ﻿using Base.Core.Data;
+using System;
 using System.Linq;
 
 namespace Base.Core.EntityFramework
@@ -10,6 +11,11 @@ namespace Base.Core.EntityFramework
         public Repository(IDataContext dataContext)
         {
             _dataContext = dataContext;
+        }
+
+        public void Dispose()
+        {
+            
         }
 
         public TEntity Find<TEntity, TPropertyType>(TPropertyType id)

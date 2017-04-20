@@ -78,6 +78,14 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entity.6.9.9\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="SimpleInjector, Version=4.0.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
       <HintPath>..\packages\SimpleInjector.4.0.0\lib\net45\SimpleInjector.dll</HintPath>
       <Private>True</Private>
@@ -243,6 +251,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="ContadorBootstrapper.cs" />
+    <Compile Include="Controllers\TipoPagamentoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -310,7 +319,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -324,6 +332,10 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Base.Core.EntityFramework\Base.Core.EntityFramework.csproj">
+      <Project>{8EFDB0F1-9D53-45D4-8894-F99408C45093}</Project>
+      <Name>Base.Core.EntityFramework</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Base.Core.SimpleInjector\Base.Core.SimpleInjector.csproj">
       <Project>{D6D06CE2-D471-42C6-8CB1-958C6C006E89}</Project>
       <Name>Base.Core.SimpleInjector</Name>
@@ -331,6 +343,14 @@
     <ProjectReference Include="..\Base.Core\Base.Core.csproj">
       <Project>{CB1FAD92-325E-408F-94E6-9C1329417919}</Project>
       <Name>Base.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Contador.Data\Contador.Data.csproj">
+      <Project>{9A053D79-AC06-4930-9FDC-10E2C9C539DA}</Project>
+      <Name>Contador.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Contador.Domain\Contador.Domain.csproj">
+      <Project>{0803D183-2B17-446C-A65F-F077C2A07E03}</Project>
+      <Name>Contador.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

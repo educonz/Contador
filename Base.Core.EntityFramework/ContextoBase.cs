@@ -6,7 +6,7 @@ using System.Data.Entity.Migrations;
 
 namespace Base.Core.EntityFramework
 {
-    public abstract class ContextoBase : DbContext, IDataContext
+    public abstract class ContextoBase : DbContext, IDataContext, IDisposable
     {
         protected ContextoBase(string nameConnection)
             : base(nameConnection)
@@ -16,6 +16,7 @@ namespace Base.Core.EntityFramework
         public TEntity Save<TEntity>(TEntity entity) where TEntity : class
         {
             Set<TEntity>().AddOrUpdate(entity);
+            SaveChanges();
             return entity;
         }
 
