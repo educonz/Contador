@@ -45,6 +45,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -305,7 +309,9 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -335,6 +341,10 @@
     <ProjectReference Include="..\Base.Core.EntityFramework\Base.Core.EntityFramework.csproj">
       <Project>{8EFDB0F1-9D53-45D4-8894-F99408C45093}</Project>
       <Name>Base.Core.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Base.Core.Log4Net\Base.Core.Log4Net.csproj">
+      <Project>{1B7455F2-C9FC-48B7-B5DE-9D282EBA7085}</Project>
+      <Name>Base.Core.Log4Net</Name>
     </ProjectReference>
     <ProjectReference Include="..\Base.Core.SimpleInjector\Base.Core.SimpleInjector.csproj">
       <Project>{D6D06CE2-D471-42C6-8CB1-958C6C006E89}</Project>

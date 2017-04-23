@@ -19,6 +19,7 @@ namespace Contador.Web
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             ConfigureDependencyResolver();
+            log4net.Config.XmlConfigurator.Configure();
         }
 
         private void ConfigureDependencyResolver()

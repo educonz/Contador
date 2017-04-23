@@ -6,12 +6,14 @@ namespace Contador.Domain.TiposPagamento.Adaptadores
     {
         public TipoPagamentoDto ToDto(TipoPagamento entity)
         {
-            return new TipoPagamentoDto
-            {
-                Id = entity.Id,
-                Descricao = entity.Descricao,
-                Usuario = entity.Usuario
-            };
+            return entity != null
+                ? new TipoPagamentoDto
+                {
+                    Id = entity.Id,
+                    Descricao = entity.Descricao,
+                    Usuario = entity.Usuario
+                }
+                : new TipoPagamentoDto();
         }
 
         public TipoPagamento ToEntity(TipoPagamentoDto dto)

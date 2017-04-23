@@ -3,6 +3,7 @@ using Base.Core.Injector;
 using Contador.Data;
 using Base.Core.EntityFramework;
 using Contador.Domain;
+using Base.Core.Log4Net;
 
 namespace Contador.Web
 {
@@ -14,6 +15,7 @@ namespace Contador.Web
             new DataBootstrapper().Load(injector);
             new EFBoostrapper().Load(injector);
             new DomainBoostrapper().Load(injector);
+            new LogBootstrapper().Load(injector);
         }
     }
 }
